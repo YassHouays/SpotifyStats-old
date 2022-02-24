@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+  }
+  body{
+      background-color: rgb(24, 24, 24);
+      color: white;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+    }
+/* nav */
+nav {
+    box-shadow: rgb(0 0 0 / 30%) 0px 0px 10px;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100px;
+    background-color: rgb(4, 3, 6);
+    text-align: center;
+    width: 100%;
+    z-index: 99;
+    padding: 10px;
+}
+nav a {
+    margin-left: 20px;
+}
+nav a:hover{
+    color:#1DB954;
+}
+nav a svg {
+    width: 50px;
+    fill : #1DB954;
+    }
+  .container{
+      display: flex;
+  }
+  .left,.right{
+    width: 50%;
+    display: flex;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }   
+    .right{
+        background-image: url("/images/spotify-home.jpeg");
+        background-size: cover; 
+        background-position: center center;
+    }
+    #login, #loggedin {
+    display: none;
+    }
+    #login{
+        text-align: center;
+    }
+    .text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 500px;
+  }
+  
+  .btn-login{
+    display: inline-block;
+    background-color: rgb(29, 185, 84);
+    color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 17px 35px;
+    margin: 20px 0px 70px;
+    min-width: 160px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .btn-login:hover{
+      background-color: rgb(22 231 96);
+  }
+
+  .container-template h1{
+    margin-top: 5rem;
+    margin-left: 20rem;
+  }
+  .container-playlist {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+    margin-top:4.5rem;
+  }
+  .cards{
+      width: 200px;
+      margin: auto;
+  }
+  .cards img {
+      width: 100%;
+      border-radius: 15px;
+  }
+  .cards p {
+      text-align: center;
+      margin-top: 5px;
+  }
+  #range{
+      display: flex;
+      margin-top: 2rem;
+      margin-left: 20rem;
+      list-style-type: none;
+  }
+  #range li {
+      margin-left: 20px;
+      cursor: pointer;
+  }
+  #range li:hover{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+  }
+  #range li.active{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+  }
+  .hidden{
+      display: none;
+  }

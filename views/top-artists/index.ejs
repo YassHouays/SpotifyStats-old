@@ -1,0 +1,25 @@
+<!-- <%= JSON.stringify(data.items) %> -->
+<% var arrayRange = [{ key:'long',value: data.long.items},{ key:'medium',value: data.medium.items},{ key:'short',value: data.short.items}] %>
+
+<div class="container-template">
+    <h1>Your top artists</h1>
+        <ul id="range">
+            <li class="btn tab-switcher active" data-tab="long"><a href="#">For ever</a></li>
+            <li class="btn tab-switcher" data-tab="medium"><a href="#">Last 6 months</a></li>
+            <li class="btn tab-switcher" data-tab="short"><a href="#">Last month</a></li>
+        </ul>
+       
+        <% arrayRange.forEach(function(range) { %>
+            <div class="container-playlist tab-container <%= (range.key=='long'?'':'hidden') %>" data-tab="<%= range.key%>">
+                <% for (key in data.long.items) { %>
+                    <div class="cards">
+                        <img src="<%= range.value[key].images[0].url %>">
+                        <p><%= range.value[key].name %></p>
+        
+                    </div>
+                <% } %>
+
+              </div>         
+        <% }); %> 
+
+</div>

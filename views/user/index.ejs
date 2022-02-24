@@ -1,0 +1,16 @@
+
+<!-- <%= JSON.stringify(data.items) %> -->
+<div class="container-template">
+    <h1>Your playlists</h1>
+    <div class="container-playlist">
+<% for (key in data.items) { %>
+    <% var tabimages = data.items[key].images; %>
+        <!-- <h1><%= data.items[key].name%></h1> -->
+        <div class="cards">
+            <img src="<%= tabimages[0].url %>">
+            <p><%= data.items[key].name %></p>
+        </div>
+        
+<% } %>
+</div>
+</div>
